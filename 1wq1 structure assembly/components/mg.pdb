@@ -1,6 +1,0 @@
-REMARK   Accelrys Discovery Studio PDB file
-REMARK   Created:  2018-03-26T20:36:57Z
-CRYST1   83.391   79.030   82.986  90.00  90.00  90.00 P1         
-HETATM    1 MG    MG M 168     -15.547  19.744  17.537  0.00  0.00      MG  MG2+
-TER       2       MG M 168 
-END

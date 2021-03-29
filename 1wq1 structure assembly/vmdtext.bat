@@ -1,1 +1,0 @@
-"C:\Program Files (x86)\University of Illinois\VMD\vmd" -dispdev text -e %1
