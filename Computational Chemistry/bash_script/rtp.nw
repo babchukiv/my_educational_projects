@@ -1,6 +1,0 @@
- start RCNI
- prepare
- read INCR.rst
- write INCR.pdb
- end
- task prepare

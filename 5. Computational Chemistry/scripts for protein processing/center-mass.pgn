@@ -1,0 +1,7 @@
+set psf     5btr_A_pliw_wb_i.psf
+set pdb     5btr_A_pliw_wb_i.pdb
+set mol [mol new $psf waitfor all] 
+mol addfile $pdb type pdb waitfor all 
+set all [atomselect $mol all] 
+measure center $all weight mass
+exit

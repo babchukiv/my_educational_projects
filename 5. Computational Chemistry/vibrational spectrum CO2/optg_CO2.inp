@@ -1,0 +1,12 @@
+ $CONTRL SCFTYP=RHF RUNTYP=optimize $END
+ $BASIS  GBASIS=N31 NGAUSS=6 ndfunc=1 npfunc=1 $END
+ $STATPT hssend=.T. $END      
+
+ $DATA                                                     ! Paste geometry near TS
+  CO2
+ Cnv 4 
+
+ C   6    0.0    0.0   0.0 
+ O   8    0.0    0.0   1.0
+ O   8    0.0    0.0  -1.0 
+ $END

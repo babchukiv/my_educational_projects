@@ -1,0 +1,127 @@
+#############################################################
+## JOB DESCRIPTION                                         ##
+#############################################################
+
+# NPT optimization of water box
+# BCHE G117H in water box protein and crystallographic water fixed
+
+
+#############################################################
+## ADJUSTABLE PARAMETERS                                   ##
+#############################################################
+
+# Input
+structure           5btr_A_pliw_wb_i.psf
+coordinates         5btr_A_pliw_wb_i.pdb
+
+set outputname      5btr_A_pliw_wb_i_min
+#set fixedatoms      fixahvmd.prot
+
+paraTypeCharmm	    on
+parameters          par_all36_prot.prm
+parameters          par_water_ions.str
+parameters          par_all36_cgenff_c547-Katya.prm
+
+binaryoutput   no
+
+firsttimestep      0
+set temperature    298
+temperature         $temperature
+
+#############################################################
+## SIMULATION PARAMETERS                                   ##
+#############################################################
+
+
+
+# Force-Field Parameters
+exclude             scaled1-4
+1-4scaling          1.0
+cutoff              12.
+switching           on
+switchdist          10.
+pairlistdist        13.5
+
+
+# Integrator Parameters
+timestep            1.0  ;
+rigidBonds          water ;
+nonbondedFreq       1
+fullElectFrequency  2  
+stepspercycle       10
+
+
+# Constant Temperature Control
+langevin            on    ;# do langevin dynamics
+langevinDamping     5     ;# damping coefficient (gamma) of 5/ps
+#langevinTemp        $temperature
+langevinHydrogen    on    ;# don't couple langevin bath to hydrogens
+
+
+# Periodic Boundary Conditions
+cellBasisVector1    104.5    0.   0.
+cellBasisVector2     0.   84.5    0.
+cellBasisVector3     0.    0.    97.6
+cellOrigin          -21.32 68.02 6.32
+wrapAll             on
+
+
+# PME (for full-system periodic electrostatics)
+PME                 yes
+PMEGridSpacing      1.0
+
+
+# Constant Pressure Control (variable volume)
+useGroupPressure      yes  ;
+useFlexibleCell       no 
+useConstantArea       no
+
+BerendsenPressure                  on
+BerendsenPressureTarget            1.01325
+BerendsenPressureCompressibility   4.57E-5
+BerendsenPressureRelaxationTime    100
+BerendsenPressureFreq              10
+
+
+# Output
+outputName          $outputname
+
+restartfreq         1000    ;
+dcdfreq             1000
+xstFreq             1000
+outputEnergies      200
+outputPressure      200
+
+#############################################################
+## FIXED ATOMS                                             ##
+#############################################################
+
+# Fixed Atoms Constraint (set PDB beta-column to 1)
+if {0} {
+fixedAtoms          on
+fixedAtomsFile      $fixedatoms
+fixedAtomsCol       B
+}
+
+
+#############################################################
+## EXTRA PARAMETERS                                        ##
+#############################################################
+
+
+#############################################################
+## EXECUTION SCRIPT                                        ##
+#############################################################
+
+# Minimization
+#minimize            1000
+#reinitvels          $temperature
+#run                 500000         ;# 500 ps
+rescaleFreq  1000
+rescaleTemp  1  
+langevinTemp 1       
+minimize     1000
+#set TEMP 298
+#rescaleTemp $TEMP 
+#langevinTemp  $TEMP 
+#run 500000

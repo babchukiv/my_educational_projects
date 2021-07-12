@@ -1,0 +1,93 @@
+REMARK   Accelrys Discovery Studio PDB file
+REMARK   Created:  2018-03-26T20:34:07Z
+CRYST1   83.391   79.030   82.986  90.00  90.00  90.00 P1         
+HETATM    1  C4' GTP T 167     -20.500  25.178  20.684  0.00  0.00      TP   C  
+HETATM    2  H4' GTP T 167     -21.570  24.980  20.808  0.00  0.00      TP   H  
+HETATM    3  O4' GTP T 167     -20.079  25.920  21.899  0.00  0.00      TP   O  
+HETATM    4  C1' GTP T 167     -19.739  27.236  21.517  0.00  0.00      TP   C  
+HETATM    5  H1' GTP T 167     -20.652  27.843  21.554  0.00  0.00      TP   H  
+HETATM    6  N9  GTP T 167     -18.599  27.723  22.295  0.00  0.00      TP   N  
+HETATM    7  C4  GTP T 167     -18.384  28.679  23.303  0.00  0.00      TP   C  
+HETATM    8  N2  GTP T 167     -19.513  31.072  25.484  0.00  0.00      TP   N  
+HETATM    9  H21 GTP T 167     -19.111  31.843  25.984  0.00  0.00      TP   H  
+HETATM   10  H22 GTP T 167     -20.527  31.033  25.354  0.00  0.00      TP   H  
+HETATM   11  N3  GTP T 167     -19.326  29.437  23.832  0.00  0.00      TP   N  
+HETATM   12  C2  GTP T 167     -18.791  30.391  24.652  0.00  0.00      TP   C  
+HETATM   13  N1  GTP T 167     -17.398  30.509  24.853  0.00  0.00      TP   N  
+HETATM   14  H1  GTP T 167     -17.102  31.210  25.492  0.00  0.00      TP   H  
+HETATM   15  C6  GTP T 167     -16.420  29.692  24.326  0.00  0.00      TP   C  
+HETATM   16  O6  GTP T 167     -15.252  29.718  24.542  0.00  0.00      TP   O  
+HETATM   17  C5  GTP T 167     -17.001  28.669  23.479  0.00  0.00      TP   C  
+HETATM   18  N7  GTP T 167     -16.413  27.658  22.843  0.00  0.00      TP   N  
+HETATM   19  C8  GTP T 167     -17.404  27.144  22.168  0.00  0.00      TP   C  
+HETATM   20  H8  GTP T 167     -17.253  26.210  21.596  0.00  0.00      TP   H  
+HETATM   21  C2' GTP T 167     -19.340  27.198  20.024  0.00  0.00      TP   C  
+HETATM   22 'H2' GTP T 167     -18.340  26.780  19.802  0.00  0.00      TP   H  
+HETATM   23  O2' GTP T 167     -19.583  28.390  19.322  0.00  0.00      TP   O  
+HETATM   24  H2' GTP T 167     -19.390  28.186  18.432  0.00  0.00      TP   H  
+HETATM   25  C3' GTP T 167     -20.322  26.199  19.545  0.00  0.00      TP   C  
+HETATM   26  H3' GTP T 167     -19.961  25.628  18.686  0.00  0.00      TP   H  
+HETATM   27  O3' GTP T 167     -21.571  26.761  19.157  0.00  0.00      TP   O  
+HETATM   28  H3T GTP T 167     -21.534  27.377  18.383  0.00  0.00      TP   H  
+HETATM   29  C5' GTP T 167     -19.673  23.894  20.659  0.00  0.00      TP   C  
+HETATM   30  H5' GTP T 167     -20.368  23.163  20.210  0.00  0.00      TP   H  
+HETATM   31 'H5' GTP T 167     -19.470  23.552  21.741  0.00  0.00      TP   H  
+HETATM   32  O5' GTP T 167     -18.399  24.094  19.956  0.00  0.00      TP   O  
+HETATM   33  PA  GTP T 167     -17.349  22.969  19.519  0.00  0.00      TP   P  
+HETATM   34  O1A GTP T 167     -16.043  23.673  19.545  0.00  0.00      TP   O  
+HETATM   35  O2A GTP T 167     -17.942  22.358  18.282  0.00  0.00      TP   O1-
+HETATM   36  O3A GTP T 167     -17.432  22.053  20.620  0.00  0.00      TP   O  
+HETATM   37  PB  GTP T 167     -16.527  20.797  20.304  0.00  0.00      TP   P  
+HETATM   38  O1B GTP T 167     -15.723  20.599  21.593  0.00  0.00      TP   O  
+HETATM   39  O2B GTP T 167     -15.617  20.759  19.069  0.00  0.00      TP   O1-
+HETATM   40  O3B GTP T 167     -17.518  19.607  20.154  0.00  0.00      TP   O  
+HETATM   41  PG  GTP T 167     -17.432  18.259  19.288  0.00  0.00      TP   P  
+HETATM   42  O1G GTP T 167     -16.703  17.200  20.067  0.00  0.00      TP   O1-
+HETATM   43  O2G GTP T 167     -16.769  18.562  18.008  0.00  0.00      TP   O  
+HETATM   44  O3G GTP T 167     -18.917  18.108  19.186  0.00  0.00      TP   O1-
+TER      45      GTP T 167 
+CONECT    1    2    3   25   29
+CONECT    2    1
+CONECT    3    1    4
+CONECT    4    3    5   21    6
+CONECT    5    4
+CONECT    6    4    7   19
+CONECT    7    6   17   11
+CONECT    8   10   12    9
+CONECT    9    8
+CONECT   10    8
+CONECT   11    7   12
+CONECT   12    8   11   13
+CONECT   13   12   14   15
+CONECT   14   13
+CONECT   15   13   17   16
+CONECT   16   15
+CONECT   17    7   15   18
+CONECT   18   17   19
+CONECT   19    6   18   20
+CONECT   20   19
+CONECT   21    4   22   25   23
+CONECT   22   21
+CONECT   23   21   24
+CONECT   24   23
+CONECT   25    1   21   26   27
+CONECT   26   25
+CONECT   27   25   28
+CONECT   28   27
+CONECT   29    1   30   31   32
+CONECT   30   29
+CONECT   31   29
+CONECT   32   29   33
+CONECT   33   32   36   34   35
+CONECT   34   33
+CONECT   35   33
+CONECT   36   33   37
+CONECT   37   36   38   40   39
+CONECT   38   37
+CONECT   39   37
+CONECT   40   37   41
+CONECT   41   40   44   43   42
+CONECT   42   41
+CONECT   43   41
+CONECT   44   41
+END

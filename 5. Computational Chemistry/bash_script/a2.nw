@@ -1,0 +1,140 @@
+title "a2r"
+start a2r
+echo
+charge -1
+memory total 3000 mb
+#print debug
+SCRATCH_DIR . /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp /tmp
+PERMANENT_DIR .
+prepare
+    directory_3 ../
+    system a2r
+    source ./a2-st.pdb
+    amber  
+    new_top new_seq
+    new_rst
+    modify atom     1:_CG      quantum
+    modify atom     1:2HG      quantum
+    modify atom     1:3HG      quantum
+    modify atom     1:4HG      quantum
+    modify atom     1:_CD      quantum
+    modify atom     1:_OE1     quantum
+    modify atom     1:_NE2     quantum
+    modify atom     1:2HE2     quantum
+    modify atom     1:3HE2     quantum
+    modify atom     3:_PG      quantum
+    modify atom     3:_O1G     quantum
+    modify atom     3:_O2G     quantum
+    modify atom     3:_O3G     quantum
+    modify atom     4:_OW      quantum
+    modify atom     4:3HW      quantum
+    modify atom     4:2HW      quantum
+    modify atom   528:_OW      quantum
+	modify atom   528:3HW      quantum
+	modify atom   528:2HW      quantum
+	modify atom   535:_OW      quantum
+	modify atom   535:3HW      quantum
+	modify atom   535:2HW      quantum
+	modify atom   635:_OW      quantum
+	modify atom   635:3HW      quantum
+	modify atom   635:2HW      quantum
+	modify atom   929:_OW      quantum
+	modify atom   929:3HW      quantum
+	modify atom   929:2HW      quantum
+	modify atom   952:_OW      quantum
+	modify atom   952:3HW      quantum
+	modify atom   952:2HW      quantum
+	modify atom  1079:_OW      quantum
+	modify atom  1079:3HW      quantum
+	modify atom  1079:2HW      quantum
+	modify atom  1145:_OW      quantum
+	modify atom  1145:3HW      quantum
+	modify atom  1145:2HW      quantum
+	modify atom  1202:_OW      quantum
+	modify atom  1202:3HW      quantum
+	modify atom  1202:2HW      quantum
+	modify atom  1355:_OW      quantum
+	modify atom  1355:3HW      quantum
+	modify atom  1355:2HW      quantum
+	modify atom  1388:_OW      quantum
+	modify atom  1388:3HW      quantum
+	modify atom  1388:2HW      quantum
+	modify atom  1392:_OW      quantum
+	modify atom  1392:3HW      quantum
+	modify atom  1392:2HW      quantum
+	modify atom  1413:_OW      quantum
+	modify atom  1413:3HW      quantum
+	modify atom  1413:2HW      quantum
+	modify atom  1417:_OW      quantum
+	modify atom  1417:3HW      quantum
+	modify atom  1417:2HW      quantum
+	modify atom  1504:_OW      quantum
+	modify atom  1504:3HW      quantum
+	modify atom  1504:2HW      quantum
+	modify atom  1766:_OW      quantum
+	modify atom  1766:3HW      quantum
+	modify atom  1766:2HW      quantum
+	modify atom  1788:_OW      quantum
+	modify atom  1788:3HW      quantum
+	modify atom  1788:2HW      quantum
+	modify atom  1814:_OW      quantum
+	modify atom  1814:3HW      quantum
+	modify atom  1814:2HW      quantum
+	modify atom  1835:_OW      quantum
+	modify atom  1835:3HW      quantum
+	modify atom  1835:2HW      quantum
+    update lists                  
+    ignore                 
+    write a2r.rst         
+    write a2r.pdb
+end                           
+task prepare 
+
+driver
+    tight
+end
+md
+    system a2r
+    noshake solute
+    cutoff 10 qmmm 10
+    msa 30000
+end
+
+
+basis
+    * library cc-pvdz
+end
+
+dft
+    disp vdw 3
+    maxiter 500
+    xc pbe0
+#    direct
+    grid
+#    grid nodisk
+end
+
+
+
+qmmm
+    region qmlink mm_solute
+    method bfgs lbfgs
+    maxiter 7 300
+    density espfit
+    ncycles 100
+    convergence 1.0d-5
+    bqzone 50
+end
+
+#constraints OP
+#spring bond 31 34 5.0 5.5
+#end
+#set constraints OP
+
+task qmmm dft optimize
+prepare
+    system a2
+    read rst a2r.rst
+    write solute pdb a2-F.pdb
+end
+task prepare
